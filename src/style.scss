@@ -6,6 +6,13 @@
 'https://fonts.googleapis.com/css?family=Kaushan Script'
 );
 
+$red: #EC7979;
+$black: #000000;
+$orange: rgba(230, 125, 125, 0.8);
+$yellow:  rgba(255, 225, 120, 0.8);
+$white: #FFFFFF;
+
+
 .main {
   font-family: Raleway, serif;
   max-width: 1510px;
@@ -13,7 +20,7 @@
   flex-direction: column;
   align-items: center;
 
-  .main__title1 {
+  &__title1 {
     text-align: center;
     font-family: 'Kaushan Script', serif;
     font-style: normal;
@@ -25,7 +32,7 @@
     color: #2D3033;
   }
 
-  .main__title2 {
+  &__title2 {
     font-weight: 900;
     font-size: 36px;
     line-height: 42px;
@@ -36,14 +43,14 @@
     color: #2D3033;
   }
 
-  .main__separator {
+  &__separator {
     width: 170px;
     height: 0;
-    border: 1px solid #EC7979;
-    background: #EC7979;
+    border: 1px solid $red;
+    background: $red;
   }
 
-  .main__subtitle {
+  &__subtitle {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -51,11 +58,11 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #000000;
+    color: $black;
     margin: 50px 200px;
   }
 
-  .main__content {
+  &__content {
     display: grid;
     grid-template-columns: repeat(4, 378px);
     grid-template-rows: repeat(2, 378px);
@@ -63,33 +70,33 @@
             "a b c d"
             "e f c g";
 
-    .main__content__a {
+    &__a {
       background-image: url("../assets/1.svg");
       grid-area: a;
     }
 
-    .main__content__b {
+    &__b {
       background-image: url("../assets/2.svg");
       grid-area: b;
     }
 
-    .main__content__c {
+    &__c {
       background-image: url("../assets/3.svg");
       grid-area: c;
     }
 
-    .main__content__d {
+    &__d {
       background-image: url("../assets/4.svg");
       grid-area: d;
     }
 
-    .main__content__e {
+    &__e {
       background-image: url("../assets/5.svg");
       grid-area: e;
     }
 
-    .main__content__f {
-      background-image: linear-gradient(rgba(230, 125, 125, 0.8), rgb(255, 225, 120, 0.8)), url("../assets/6.svg");
+    &__f {
+      background-image: linear-gradient($orange,$yellow), url("../assets/6.svg");
       grid-area: f;
       display: flex;
       justify-content: center;
@@ -109,7 +116,7 @@
         align-items: center;
         text-align: center;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: $white;
       }
 
       p {
@@ -120,11 +127,11 @@
         display: flex;
         align-items: center;
         text-align: center;
-        color: #FFFFFF;
+        color: $white;
       }
     }
 
-    .main__content__g {
+    &__g {
       background-image: url("../assets/7.svg");
       grid-area: g;
     }
